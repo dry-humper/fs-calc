@@ -93,7 +93,7 @@ def compare_age(char_a, char_b):
         return f"{char_a['name']} and {char_b['name']} were born on the same day."
 
     # Format the result string
-    return f"{older_char} is {diff.years} years, {diff.months} months and {diff.days} days older than {younger_char}."
+    return f"{older_char} is {diff.years} years, {diff.months} months, and {diff.days} days older than {younger_char}."
 
 
 def load_canon_dates():
@@ -152,14 +152,14 @@ st.title("Fallen Star Age Tracker and Calculator")
 st.sidebar.title("Modes")
 mode = st.sidebar.radio(
     "Choose Mode:",
-    ["Update Dates Canonically", "Hypothetical"]
+    ["Canonical", "Hypothetical"]
 )
 
 canon_dates = load_canon_dates()
 
 # Canonical Updates Mode
-if mode == "Update Dates Canonically":
-    st.header("Canonical Date & Age Update")
+if mode == "Canonical":
+    st.header("Canonical Date Update & Ages")
     st.caption("Here you can updated the last date we did for each chat and check ages.")
 
     # Display current saved dates
@@ -173,18 +173,36 @@ if mode == "Update Dates Canonically":
 
     st.divider()
 
-    # Form to update a date
-    st.subheader("Update Region Date")
-    region_to_update = st.selectbox("Select Region to Update:", regions)
+    # Select Region to View Canonical Ages & Update Date
+    st.subheader("Region Canonical Ages & Update")
+    selected_reg = st.selectbox("Selected Region:", regions)
 
-    current_reg_date = canon_dates.get(region_to_update, date.today().isoformat())
-    new_canon_date = st.date_input("Set New Canonical Date:", value=date.fromisoformat(current_reg_date))
+    current_reg_date_str = canon_dates.get(selected_reg, date.today().isoformat())
+    current_reg_date = date.fromisoformat(current_reg_date_str)
+
+    # Auto Age Checker for Canon Date
+    st.write(f"### Character Ages in {selected_reg} as of {current_reg_date_str}:")
+    reg_chars = get_chars_by_region(selected_reg)
+
+    if reg_chars:
+        for char in reg_chars:
+            age = calc_age(char["birthdate"], current_reg_date_str)
+            st.write(f"**{char['name']}**: {age} years old *(Born: {char['birthdate']}*")
+    else:
+        st.info(f"No characters assigned to {selected_reg} yet.")
+
+    # Form to update a date
+    st.write("Update Canonical Date for " + selected_reg)
+    new_canon_date = st.date_input(
+        value=current_reg_date,
+        min_value=date(1800, 1, 1),
+        max_value=date(2100, 12, 31)
+    )
 
     if st.button("Save"):
-        # Call JSON function
-        update_canon_date(region_to_update, new_canon_date.isoformat())
-        st.success(f"Successfully updated date for {region_to_update} to {new_canon_date}.")
-        st.rerun()  # Refresh screen to reflect saved values
+        update_canon_date(selected_reg, new_canon_date.isoformat())
+        st.success(f"Successfully updated canonical date for {selected_reg} to {new_canon_date}.")
+        st.rerun()
 
 
 elif mode == "Hypothetical":
@@ -199,10 +217,17 @@ elif mode == "Hypothetical":
     ])
 
     # Tab A -- Search by Name
-    with tab_search:
+    with (tab_search):
         st.subheader("Find a Character's Age on a Certain Date")
         search_query = st.text_input("Enter character's name:")
-        target_date = st.date_input("Select target date:", value=date.today())
+        target_date = st.date_input(
+            "Select date:",
+            value=date.today(),
+            min_value=date(1800, 1, 1),
+            max_value=date(2100, 12, 31)
+        )
+
+
 
         if search_query:
             results = get_chars_by_name(search_query)
@@ -222,7 +247,12 @@ elif mode == "Hypothetical":
         )
 
         default_date = canon_dates.get(selected_region, date.today().isoformat())
-        target_date_reg = st.date_input("Select date:", value=date.fromisoformat(default_date), key="reg_date")
+        target_date_reg = st.date_input(
+            "Select date:",
+            value=date.today(),
+            min_value=date(1800, 1, 1),
+            max_value=date(2100, 12, 31)
+        )
 
         region_chars = get_chars_by_region(selected_region)
 
