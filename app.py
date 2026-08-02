@@ -52,7 +52,7 @@ cInfo = [
     {"name": "Jackson", "birthdate": "2002-01-13", "region": "Indigo Society"},
     {"name": "Everest", "birthdate": "1994-02-13", "region": "Indigo Society"},
     {"name": "Roy", "birthdate": "1971-06-17", "region": "Indigo Society"},
-    {"name": "Krystol", "birthdate": "1969-01-03", "region": "Indigo Society"}
+    {"name": "Krystol", "birthdate": "1969-01-03", "region": "Indigo Society"},
     {"name": "Jace", "birthdate": "1972-09-04", "region": "Indigo Society"}
 ]
 
