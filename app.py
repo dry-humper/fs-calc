@@ -194,6 +194,7 @@ if mode == "Canonical":
     # Form to update a date
     st.write("Update Canonical Date for " + selected_reg)
     new_canon_date = st.date_input(
+        "Set New Canonical Date:",
         value=current_reg_date,
         min_value=date(1800, 1, 1),
         max_value=date(2100, 12, 31)
@@ -226,8 +227,6 @@ elif mode == "Hypothetical":
             min_value=date(1800, 1, 1),
             max_value=date(2100, 12, 31)
         )
-
-
 
         if search_query:
             results = get_chars_by_name(search_query)
@@ -267,7 +266,7 @@ elif mode == "Hypothetical":
 
         char_names = [c["name"] for c in cInfo]
         char_a_name = st.selectbox("Select Character A:", char_names, index=0)
-        char_b_name = st.selectbox("Select Character B:", char_names, index=min(1, len(char_names)-1))
+        char_b_name = st.selectbox("Select Character B:", char_names, index=min(1, len(char_names) - 1))
 
         if char_a_name != char_b_name:
             char_a = get_chars_by_name(char_a_name)[0]
