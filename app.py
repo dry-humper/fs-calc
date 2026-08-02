@@ -187,7 +187,7 @@ if mode == "Canonical":
     if reg_chars:
         for char in reg_chars:
             age = calc_age(char["birthdate"], current_reg_date_str)
-            st.write(f"**{char['name']}**: {age} years old *(Born: {char['birthdate']}*")
+            st.write(f"**{char['name']}**: {age} years old *(Born: {char['birthdate']})*")
     else:
         st.info(f"No characters assigned to {selected_reg} yet.")
 
@@ -226,6 +226,7 @@ elif mode == "Hypothetical":
             value=date.today(),
             min_value=date(1800, 1, 1),
             max_value=date(2100, 12, 31)
+            key="hyp_search_date"
         )
 
         if search_query:
@@ -251,6 +252,7 @@ elif mode == "Hypothetical":
             value=date.today(),
             min_value=date(1800, 1, 1),
             max_value=date(2100, 12, 31)
+            key="hyp_region_date"
         )
 
         region_chars = get_chars_by_region(selected_region)
