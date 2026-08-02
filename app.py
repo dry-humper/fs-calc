@@ -225,7 +225,7 @@ elif mode == "Hypothetical":
             "Select date:",
             value=date.today(),
             min_value=date(1800, 1, 1),
-            max_value=date(2100, 12, 31)
+            max_value=date(2100, 12, 31),
             key="hyp_search_date"
         )
 
@@ -251,7 +251,7 @@ elif mode == "Hypothetical":
             "Select date:",
             value=date.today(),
             min_value=date(1800, 1, 1),
-            max_value=date(2100, 12, 31)
+            max_value=date(2100, 12, 31),
             key="hyp_region_date"
         )
 
