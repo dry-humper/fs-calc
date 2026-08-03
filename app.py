@@ -45,6 +45,7 @@ cInfo = [
     {"name": "Devin", "birthdate": "1995-02-28", "region": "California"},
     {"name": "Korey", "birthdate": "1993-12-10", "region": "California"},
     {"name": "Antonio", "birthdate": "1990-08-31", "region": "California"},
+    {"name": "Luther", "birthdate": "1990-02-19", "region": "California"},
     {"name": "Wendell", "birthdate": "1968-02-14", "region": "Indigo Society"},
     {"name": "Madison", "birthdate": "1993-03-08", "region": "Indigo Society"},
     {"name": "Kingston", "birthdate": "2002-05-06", "region": "Indigo Society"},
@@ -53,7 +54,12 @@ cInfo = [
     {"name": "Everest", "birthdate": "1994-02-13", "region": "Indigo Society"},
     {"name": "Roy", "birthdate": "1971-06-17", "region": "Indigo Society"},
     {"name": "Krystol", "birthdate": "1969-01-03", "region": "Indigo Society"},
-    {"name": "Jace", "birthdate": "1972-09-04", "region": "Indigo Society"}
+    {"name": "Jade", "birthdate": "2002-05-31", "region": "Indigo Society"},
+    {"name": "Amethyst", "birthdate": "2005-11-22", "region": "Indigo Society"},
+    {"name": "Jace", "birthdate": "1972-09-04", "region": "Indigo Society"},
+    {"name": "Frankie", "birthdate": "1972-05-13", "region": "Indigo Society"},
+    {"name": "Lynn", "birthdate": "1950-01-16", "region": "Other"},
+    {"name": "Jackie", "birthdate": "1949-08-31", "region": "Other"}
 ]
 
 
