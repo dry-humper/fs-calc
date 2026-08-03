@@ -167,7 +167,7 @@ canon_dates = load_canon_dates()
 # Canonical Updates Mode
 if mode == "Canonical":
     st.header("Canonical Date Update & Ages")
-    st.caption("Here you can updated the last date we did for each chat and check ages.")
+    st.caption("Here you can update the last date we did for each chat and check ages.")
 
     # Display current saved dates
     st.subheader("Current Canonical Dates")
