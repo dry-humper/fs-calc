@@ -53,7 +53,7 @@ cInfo = [
     {"name": "Jackson", "birthdate": "2002-01-13", "region": "Indigo Society"},
     {"name": "Everest", "birthdate": "1994-02-13", "region": "Indigo Society"},
     {"name": "Roy", "birthdate": "1971-06-17", "region": "Indigo Society"},
-    {"name": "Krystol", "birthdate": "1969-01-03", "region": "Indigo Society"},
+    {"name": "Krystol", "birthdate": "1968-01-03", "region": "Indigo Society"},
     {"name": "Jade", "birthdate": "2002-05-31", "region": "Indigo Society"},
     {"name": "Amethyst", "birthdate": "2005-11-22", "region": "Indigo Society"},
     {"name": "Jace", "birthdate": "1972-09-04", "region": "Indigo Society"},
