@@ -27,7 +27,7 @@ cInfo = [
     {"name": "Lisa", "birthdate": "1977-07-11", "region": "Texas"},
     {"name": "Julie", "birthdate": "2006-10-28", "region": "Texas"},
     {"name": "Rafaela", "birthdate": "1977-04-19", "region": "Texas"},
-    {"name": "Harunobu", "birthdate": "1974-07-01", "region": "California"},
+    {"name": "Harunobu", "birthdate": "1971-07-01", "region": "California"},
     {"name": "Ethan", "birthdate": "1994-11-04", "region": "California"},
     {"name": "Nathaniel", "birthdate": "1989-01-26", "region": "California"},
     {"name": "Vernon", "birthdate": "1986-05-21", "region": "California"},
