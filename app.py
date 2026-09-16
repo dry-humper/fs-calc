@@ -59,14 +59,14 @@ cInfo = [
     {"name": "Amethyst", "birthdate": "2005-11-22", "region": "Indigo Society"},
     {"name": "Jace", "birthdate": "1972-09-04", "region": "Indigo Society"},
     {"name": "Frankie", "birthdate": "1972-05-13", "region": "Indigo Society"},
-    {"name": "Elliot", "birthdate": "1948-07-15", "region": "Indigo Society"},
-    {"name": "Connie", "birthdate": "1972-05-13", "region": "Indigo Society"},
+    {"name": "Elliot", "birthdate": "1946-04-09", "region": "Indigo Society"},
+    {"name": "Connie", "birthdate": "1948-07-15", "region": "Indigo Society"},
     {"name": "Missy", "birthdate": "1969-09-21", "region": "Indigo Society"},
     {"name": "Traci", "birthdate": "1973-06-29", "region": "Indigo Society"},
+    {"name": "Miriam", "birthdate": "1952-04-03", "region": "Indigo Society"},
     {"name": "Warren", "birthdate": "2000-07-01", "region": "Indigo Society"},
     {"name": "Glen", "birthdate": "1922-01-28", "region": "Indigo Society"},
     {"name": "Ike", "birthdate": "1925-09-23", "region": "Indigo Society"},
-    {"name": "Miriam", "birthdate": "1952-04-03", "region": "Indigo Society"},
     {"name": "Lynn", "birthdate": "1950-01-16", "region": "Other"},
     {"name": "Jackie", "birthdate": "1949-08-31", "region": "Other"}
 ]
